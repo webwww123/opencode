@@ -70,6 +70,8 @@ jobs:
       - name: Upload hash
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 3
+        with:
           name: hash-${{ matrix.system }}
           path: hash.txt
           retention-days: 1
